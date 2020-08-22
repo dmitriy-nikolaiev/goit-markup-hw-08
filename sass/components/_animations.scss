@@ -1,0 +1,28 @@
+// Опциональная анимация
+// стили для анимации логотипа в шапке
+.header {
+  .logo {
+    // для удобного ховера
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    // для анимации Web
+    .logo-accent {
+      display: inline-block;
+    }
+
+    // анимация
+    &:hover {
+      animation: swing 1000ms;
+    }
+
+    &:hover .logo-accent {
+      animation: animationWeb 1000ms 1000ms;
+    }
+  }
+}
+
+// анимация
+.about-us-list-item:hover .about-us-overlay {
+  animation: flipInX 1000ms;
+}

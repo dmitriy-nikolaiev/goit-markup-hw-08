@@ -1,0 +1,94 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $dark-theme-background-color;
+}
+
+.footer .container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+  color: $dark-theme-color;
+}
+
+.address {
+  font-style: normal;
+  @include font();
+  // font-weight: 400;
+  // font-size: 14px;
+  // line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $dark-theme-secondary-color;
+}
+
+.address-postal {
+  margin-bottom: 9px;
+  color: $dark-theme-color;
+}
+.address-mail {
+  margin-bottom: 9px;
+  color: $dark-theme-secondary-color;
+}
+.address-tel {
+  color: $dark-theme-secondary-color;
+}
+
+.social-join .title,
+.sign-form-container .title {
+  display: block;
+  margin-bottom: 20px;
+  color: $dark-theme-color;
+}
+
+// .social-join {
+.footer {
+  .social-list-item-link {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: $main-background-color;
+
+    &:hover {
+      background-color: $accent-color;
+    }
+  }
+
+  // .social-list-item-link:hover {
+  //   background-color: $accent-color;
+  // }
+}
+
+.sign-form {
+  display: flex;
+  width: 570px;
+}
+
+.sign-form-input {
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @include font(16px, 400, 1.25);
+  // font-size: 16px;
+  // line-height: 1.25;
+
+  /* color: rgba(255, 255, 255, 0.6); */
+  color: $main-background-color;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.sign-form-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sign-form .send-icon {
+  margin-left: 10px;
+}

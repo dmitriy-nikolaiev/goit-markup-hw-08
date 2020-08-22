@@ -1,0 +1,31 @@
+.features {
+  padding-top: 94px;
+}
+
+.features-title {
+  display: none;
+}
+.features-list {
+  display: flex;
+}
+
+.features-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.features-image-container {
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 4px;
+  background-color: $secondary-background-color;
+}
+
+.features-list-item .title {
+  margin-bottom: 10px;
+}

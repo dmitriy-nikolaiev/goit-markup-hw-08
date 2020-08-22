@@ -1,0 +1,28 @@
+.about-us-list {
+  display: flex;
+  justify-content: center;
+}
+
+.about-us-list-item {
+  position: relative;
+  /* width: 370px; */
+}
+
+.about-us-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about-us-list-item .title {
+  text-align: center;
+  color: $main-background-color;
+}
+
+.about-us-overlay {
+  position: absolute;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(47, 48, 58, 0.8);
+}
