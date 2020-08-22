@@ -18,66 +18,74 @@
   <body>
     <!-- header -->
     <header class="header">
-      <div class="container">
-        <nav class="header-navigation">
-          <a class="logo logo-light-theme link" href="./index.html" lang="en"
-            ><span class="logo-accent">Web</span> Studio</a
-          >
-          <ul class="navigation-list list">
-            <li class="navigation-list-item">
+      <div class="container header-container">
+        <a class="logo logo-light-theme link" href="./index.html" lang="en"
+          ><span class="logo-accent">Web</span> Studio</a
+        >
+        <button type="button" class="menu-button button" aria-expanded="false" aria-controls="menu-wrapper" data-menu-button>
+          <svg width="40" height="40">
+              <use class="icon-burger" href="./images/sprite.svg#menu"></use>
+              <use class="icon-close" href="./images/sprite.svg#menu-close"></use>
+          </svg>
+        </button>        
+        <div class="menu-wrapper" data-menu>
+          <nav class="header-navigation">
+            <ul class="navigation-list list">
+              <li class="navigation-list-item">
+                <a
+                  class="navigation-item-link link nav-item-active"
+                  href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="navigation-list-item">
+                <a class="navigation-item-link link" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="navigation-list-item">
+                <a class="navigation-item-link link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+  
+          <ul class="header-address-list list">
+            <li class="header-address-list-item">
               <a
-                class="navigation-item-link link nav-item-active"
-                href="./index.html"
-                >Студия</a
+                class="header-address-item-link link"
+                href="mailto:info@devstudio.com"
+              >
+                <svg class="header-address-icon">
+                  <use href="./images/sprite.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a
               >
             </li>
-            <li class="navigation-list-item">
-              <a class="navigation-item-link link" href="./portfolio.html"
-                >Портфолио</a
+            <li class="header-address-list-item">
+              <a class="header-address-item-link link" href="tel:+380961111111">
+                <svg class="header-address-icon">
+                  <use href="./images/sprite.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
               >
-            </li>
-            <li class="navigation-list-item">
-              <a class="navigation-item-link link" href="">Контакты</a>
             </li>
           </ul>
-        </nav>
-
-        <ul class="header-address-list list">
-          <li class="header-address-list-item">
-            <a
-              class="header-address-item-link link"
-              href="mailto:info@devstudio.com"
-            >
-              <svg class="header-address-icon">
-                <use href="./images/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="header-address-list-item">
-            <a class="header-address-item-link link" href="tel:+380961111111">
-              <svg class="header-address-icon">
-                <use href="./images/sprite.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
     </header>
 
     <main>
       <!-- hero секция -->
-      <section class="hero">
+      <!-- <section class="hero">
         <h1 class="hero-title">
           Эффективные решения <br />
           для вашего бизнеса
         </h1>
-        <button data-modal-open class="main-button">Заказать услугу</button>
-      </section>
+        <button data-modal-open class="main-button button">Заказать услугу</button>
+      </section> -->
 
       <!--секция особенности-->
-      <section class="features">
+      <!-- <section class="features">
         <div class="container">
           <h2 class="features-title">Особенности</h2>
           <ul class="features-list list">
@@ -130,11 +138,6 @@
                 >
                   <use href="./images/sprite.svg#astronaut"></use>
                 </svg>
-                <!-- <img
-                  class="features-list-item-image"
-                  src="./images/astronaut.svg"
-                  alt="иконка астронавт"
-                /> -->
               </div>
               <h3 class="title">Современные технологии</h3>
               <p class="text">
@@ -144,10 +147,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!--секция о нас-->
-      <section class="about-us section">
+      <!-- <section class="about-us section">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="about-us-list list">
@@ -180,10 +183,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!--секция наша команда-->
-      <section class="team section">
+      <!-- <section class="team section">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list list">
@@ -413,10 +416,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!--clients section-->
-      <section class="clients section">
+      <!-- <section class="clients section">
         <div class="container">
           <h2 class="section-title">Постоянные клиенты</h2>
           <ul class="clients-list list">
@@ -494,7 +497,7 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <footer class="footer">
