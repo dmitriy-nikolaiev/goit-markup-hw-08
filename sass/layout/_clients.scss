@@ -1,17 +1,33 @@
 .clients-list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
 }
 
-.clients-list-item:not(:last-child) {
+// нечетные
+.clients-list-item:nth-child(odd){
   margin-right: 30px;
 }
+
+// кроме последним 2
+.clients-list-item:not(:nth-last-child(-n + 2)){
+  margin-bottom: 30px;
+}
+
+// PC
+// .clients-list-item:not(:last-child) {
+//   margin-right: 30px;
+
+// }
 
 .clients-item-link {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: 170px;
+  // width: 170px;
+  width: 210px;
   height: 90px;
 
   border: 1px solid;
@@ -29,19 +45,13 @@
   }
 }
 
-// .clients-item-link:hover,
-// .clients-item-link:focus {
-//   border-color: $accent-color;
-//   color: $accent-color;
-// }
 
 .clients-item-icon {
   /* fill: $icon-color; */
   fill: currentColor;
 }
 
-/* Вопрос  color для link или fill для clients-item-icon */
-/* .clients-item-link:hover .clients-item-icon,
-.clients-item-link:focus .clients-item-icon {
-  fill: $accent-color;
-} */
+// только для мобилного
+@media screen and (max-width: 767px) {
+
+}

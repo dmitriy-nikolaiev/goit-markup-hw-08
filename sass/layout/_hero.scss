@@ -1,17 +1,20 @@
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  max-width: 1600px;
+  // padding-top: 200px;
+  // padding-bottom: 200px;
+  // max-width: 1600px;
   margin-top: -1px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   background-image: linear-gradient(
-      rgba(47, 48, 58, 0.8),
-      rgba(47, 48, 58, 0.8)
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
     ),
-    url(../images/header.jpg);
+    url(../images/header-480.jpg);
+    
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero-title {
@@ -25,6 +28,23 @@
   margin-bottom: 30px;
 }
 
+
 .hero .main-button {
   margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    max-width: 480px;
+    // height: 400px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+}
+
+ .hero-title{
+  //  max-width: 360px;
+   @include font(26px, 900, 1.62);
+
+ }
+
 }
