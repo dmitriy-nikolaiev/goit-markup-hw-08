@@ -1107,12 +1107,7 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
-}
-
-.footer .container {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  text-align: center;
 }
 
 .footer-logo {
@@ -1129,48 +1124,39 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.address-postal {
-  margin-bottom: 9px;
+.address .link:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.address .address-postal {
   color: #ffffff;
 }
 
-.address-mail {
-  margin-bottom: 9px;
+.address .address-link {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.address-tel {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.social-join .title,
+.footer-social .title,
 .sign-form-container .title {
   display: block;
   margin-bottom: 20px;
   color: #ffffff;
 }
 
-.footer .social-list-item-link {
+.footer-social .social-list-item-link {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   color: #ffffff;
 }
 
-.footer .social-list-item-link:hover {
+.footer-social .social-list-item-link:hover {
   background-color: #2196f3;
 }
 
-.sign-form {
-  display: flex;
-  width: 570px;
-}
-
 .sign-form-input {
-  width: 358px;
+  width: 100%;
   height: 50px;
-  margin-right: 12px;
-  padding-left: 16px;
-  padding-right: 16px;
+  margin-bottom: 20px;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.25;
@@ -1186,8 +1172,19 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.sign-form .main-button {
+  margin: 0 auto;
+}
+
 .sign-form .send-icon {
   margin-left: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-address-container,
+  .footer-social {
+    margin-bottom: 60px;
+  }
 }
 
 .projects-filter-list-item {
