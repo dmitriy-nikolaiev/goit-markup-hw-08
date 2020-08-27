@@ -26,7 +26,7 @@
 .logo {
   font-family: $logo-font;
   font-style: normal;
-  @include font(26px, 700, 1.19);
+  @include font(24px, 700, 1.17);
   letter-spacing: 0.03em;
 }
 
@@ -39,9 +39,9 @@
 }
 
 .navigation-item-link {
-  position: relative;
-  // padding-top: 32px;
-  // padding-bottom: 32px;
+  // position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
   @include font(14px, 500, 1.14);
   letter-spacing: 0.02em;
@@ -57,6 +57,8 @@
 }
 
 .nav-item-active {
+  position: relative;
+
   color: $accent-color;
 
   &::after {
@@ -77,6 +79,7 @@
 .header-address-list {
   display: flex;
   align-items: center;
+  flex-direction: column;
   // margin-left: auto;
 
   // &-item:not(:last-child) {
@@ -86,8 +89,9 @@
 
 .header-address-item-link {
   display: flex;
+  align-items: center;
 
-  @include font(14px, 500, 1.14);
+  @include font(18px, 500, 1.17);
   letter-spacing: 0.02em;
 
   color: $main-text-color;
@@ -100,9 +104,10 @@
   }
 }
 
-.header-address-icon {
-  width: 16px;
-  height: 16px;
+.address-icon-mail,
+.address-icon-phone {
+  // width: 16px;
+  // height: 12px;
   margin-right: 10px;
   fill: currentColor;
 }
@@ -190,28 +195,40 @@
     text-align: center;
 
     transform: translateY(-101%);
-    transition: transform 500ms linear;
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
     // background-color: turquoise;
     background-color: $main-background-color;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
-      0px 1px 3px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 
     &.is-open {
       transform: translateY(72px);
     }
   }
 
+  // .navigation-list-item:not(:last-child) {
+  //   margin-bottom: 40px;
+  // }
+
   .navigation-item-link {
     // &:not(:last-child){
     //   margin-bottom: 40px;
     // }
     display: inline-block;
+    // padding-top: 0;
+    // padding-bottom: 0;
     padding-top: 20px;
     padding-bottom: 20px;
+
+    @include font(18px, 500, 1.16);
   }
 
   .nav-item-active {
+    // padding-bottom: 8px;
     padding-bottom: 32px;
+
+    &::after {
+      bottom: 20px;
+    }
   }
 
   .header-address-list {
@@ -222,8 +239,24 @@
   .header-address-list-item:not(:last-child) {
     margin-bottom: 16px;
   }
+
+  .address-icon-mail {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+  }
+
+  .address-icon-phone {
+    width: 10px;
+    height: 15px;
+    margin-right: 10px;
+  }
 }
 
+// Только для планшета
+// @media screen and (min-width: 768px) and (max-width:1199px){
+
+// }
 // для планшета
 @media screen and (min-width: 768px) {
   .header-container {
@@ -231,12 +264,62 @@
     justify-content: space-between;
   }
 
-  .menu-wrapper,
-  .header-navigation {
+  .menu-wrapper {
     display: flex;
+  }
+
+  .navigation-list {
+    display: flex;
+    margin-right: 84px;
+
+    &-item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+
+  .header-address-list {
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .header-address-list-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .header-address-item-link {
+    @include font(12px, 500, 1.17);
+  }
+
+  .address-icon-mail {
+    width: 14px;
+    height: 10px;
+  }
+  .address-icon-phone {
+    width: 10px;
+    height: 14px;
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .logo {
+    @include font(26px, 700, 1.19);
+  }
+
+  .header-address-item-link {
+    @include font(14px, 500, 1.14);
+  }
+
+  .address-icon-mail {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+  }
+  .address-icon-phone {
+    width: 12px;
+    height: 16px;
+    margin-right: 10px;
+  }
+}
 // ###################################
 // ###################################
 

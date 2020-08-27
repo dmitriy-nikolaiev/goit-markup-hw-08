@@ -6,19 +6,20 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/header-480.jpg);
-    
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+
+  // background-image: linear-gradient(
+  //     rgba(47, 48, 58, 0.4),
+  //     rgba(47, 48, 58, 0.4)
+  //   ),
+  //   url(../images/header-480.jpg);
+
+  // background-position: center;
+  // background-size: cover;
+  // background-repeat: no-repeat;
 }
 
 .hero-title {
-  @include font(44px, 900, 1.36);
+  // @include font(44px, 900, 1.36);
   // font-weight: 900;
   // font-size: 44px;
   // line-height: 1.36;
@@ -28,23 +29,35 @@
   margin-bottom: 30px;
 }
 
-
 .hero .main-button {
   margin: 0 auto;
 }
 
+// MOBILE
 @media screen and (max-width: 767px) {
   .hero {
     max-width: 480px;
-    // height: 400px;
-  padding-top: 118px;
-  padding-bottom: 118px;
-}
+    height: 400px;
+    padding-top: 118px;
+    padding-bottom: 118px;
 
- .hero-title{
-  //  max-width: 360px;
-   @include font(26px, 900, 1.62);
+    // background-size: 480px 400px;
 
- }
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
+    background-image: $background-gradient, url("../images/hero-480.jpg");
+
+    @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+      & {
+        background-image: $background-gradient, url("../images/hero-480@2x.jpg");
+      }
+    }
+  }
+
+  .hero-title {
+    //  max-width: 360px;
+    @include font(26px, 900, 1.62);
+  }
 }
