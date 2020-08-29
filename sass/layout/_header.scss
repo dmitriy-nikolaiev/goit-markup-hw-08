@@ -268,9 +268,12 @@
     display: flex;
   }
 
+  .header-navigation {
+    margin-right: 84px;
+  }
+
   .navigation-list {
     display: flex;
-    margin-right: 84px;
 
     &-item:not(:last-child) {
       margin-right: 50px;
@@ -300,9 +303,23 @@
   }
 }
 
+// десктоп
 @media screen and (min-width: 1200px) {
   .logo {
     @include font(26px, 700, 1.19);
+  }
+  .header-navigation {
+    margin-right: 305px;
+  }
+
+  .header-address-list {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .header-address-list-item:not(:last-child) {
+    margin-bottom: 0px;
+    margin-right: 30px;
   }
 
   .header-address-item-link {
