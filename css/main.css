@@ -752,7 +752,6 @@ body {
   padding: 12px;
   border-radius: 50%;
   color: #afb1b8;
-  /* fill: $icon-color; */
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -768,7 +767,6 @@ body {
   width: 20px;
   height: 20px;
   fill: currentColor;
-  /* fill: $icon-color; */
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1104,6 +1102,10 @@ body {
   justify-content: center;
 }
 
+.features-list-title {
+  margin-bottom: 10px;
+}
+
 .features-image-container {
   width: 100%;
   height: 120px;
@@ -1115,22 +1117,18 @@ body {
   background-color: #f5f4fa;
 }
 
-.features-list-title {
-  margin-bottom: 10px;
-}
-
 @media screen and (max-width: 767px) {
   .features-list {
     display: block;
+  }
+  .features-list-title {
+    text-align: center;
   }
   .features-list-item {
     max-width: 450px;
   }
   .features-list-item:not(:last-child) {
     margin-bottom: 30px;
-  }
-  .features-list-title {
-    text-align: center;
   }
 }
 
@@ -1144,7 +1142,7 @@ body {
   .features-list-item:nth-child(odd) {
     margin-right: 30px;
   }
-  .features-list-item:not(:nth-last-child(-n + 2)) {
+  .features-list-item:nth-child(odd):not(:nth-last-child(-n + 2)) {
     margin-bottom: 30px;
   }
 }
@@ -1502,6 +1500,7 @@ body {
 .filter-input:checked + .filter-button {
   color: #ffffff;
   background-color: #2196f3;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
 .projects-title {
@@ -1533,8 +1532,7 @@ body {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.projects-item-link:hover,
-.projects-item-link:focus {
+.projects-item-link:hover, .projects-item-link:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
@@ -1576,7 +1574,6 @@ body {
 
 .projects-overlay-text {
   position: absolute;
-  /* transform: translateY(-100%); */
   left: 0;
   top: 100%;
   width: 100%;
@@ -1610,7 +1607,7 @@ body {
     margin-right: 8px;
     margin-bottom: 15px;
   }
-  .projects-filter-list-item::nth-child(2n) {
+  .projects-filter-list-item:nth-child(2n) {
     margin-right: 0px;
   }
   .projects-filter-list-item:last-child {

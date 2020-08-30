@@ -1,29 +1,14 @@
-// .features {
-//   padding-top: 60px;
-
-// // PC
-//   // padding-top: 94px;
-// }
-
 .features-title {
   display: none;
 }
 
-// PC
-// .features-list {
-//   display: flex;
-// }
-
-// .features-list-item:not(:last-child) {
-//   margin-bottom: 30px;
-//   // PC
-//   // margin-right: 30px;
-// }
-
 .features-list {
   display: flex;
-  // flex-wrap: wrap;
   justify-content: center;
+
+  &-title {
+    margin-bottom: 10px;
+  }
 }
 
 .features-image-container {
@@ -39,46 +24,40 @@
   background-color: $secondary-background-color;
 }
 
-.features-list-title {
-  margin-bottom: 10px;
-}
-
 // только для мобилного
 @media screen and (max-width: 767px) {
   .features-list {
     display: block;
+
+    &-title {
+      text-align: center;
+    }
   }
   .features-list-item {
     max-width: 450px;
-  }
 
-  .features-list-item:not(:last-child) {
-    margin-bottom: 30px;
-  }
-
-  .features-list-title {
-    text-align: center;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 }
 
 // для планшета
 @media screen and (min-width: 768px) and (max-width: 1200px) {
   .features-list {
-    //   display: flex;
     flex-wrap: wrap;
-    //   justify-content: center;
   }
 
   .features-list-item {
     max-width: 354px;
-  }
 
-  .features-list-item:nth-child(odd) {
-    margin-right: 30px;
-  }
+    &:nth-child(odd) {
+      margin-right: 30px;
 
-  .features-list-item:not(:nth-last-child(-n + 2)) {
-    margin-bottom: 30px;
+      &:not(:nth-last-child(-n + 2)) {
+        margin-bottom: 30px;
+      }
+    }
   }
 }
 
@@ -86,9 +65,9 @@
 @media screen and (min-width: 1200px) {
   .features-list-item {
     max-width: 270px;
-  }
 
-  .features-list-item:not(:last-child) {
-    margin-right: 30px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }

@@ -3,19 +3,20 @@
   padding-bottom: 60px;
   background-color: $dark-theme-background-color;
   text-align: center;
+  &-logo {
+    margin-bottom: 20px;
+    color: $dark-theme-color;
+  }
 }
 
-.footer-logo {
-  margin-bottom: 20px;
-  color: $dark-theme-color;
-}
+// .footer-logo {
+//   margin-bottom: 20px;
+//   color: $dark-theme-color;
+// }
 
 .address {
   font-style: normal;
   @include font();
-  // font-weight: 400;
-  // font-size: 14px;
-  // line-height: 1.71;
   letter-spacing: 0.03em;
   color: $dark-theme-secondary-color;
 
@@ -41,7 +42,6 @@
   }
 }
 
-// .social-join {
 .footer-social {
   .social-list-item-link {
     background-color: rgba(255, 255, 255, 0.1);

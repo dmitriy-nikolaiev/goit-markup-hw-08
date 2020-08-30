@@ -36,28 +36,6 @@
   }
 }
 
-// .team-item-image {
-//   width: 100%;
-//   margin-bottom: 30px;
-// }
-
-// .team-item-title {
-//   margin-bottom: 10px;
-
-//   @include font(16px, 500, 1.19);
-//   letter-spacing: 0.03em;
-//   text-align: center;
-//   color: $main-title-color;
-// }
-
-// .team-item-position {
-//   margin-bottom: 16px;
-
-//   @include font(16px, 400, 1.19);
-//   letter-spacing: 0.03em;
-//   text-align: center;
-// }
-
 // только для мобилного
 @media screen and(max-width: 767px) {
   .team-list-item:not(:last-child) {
